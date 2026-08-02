@@ -15,8 +15,8 @@
     --radius-lg: 16px;
     --space-sm: 0.5rem;
     --space-md: 1rem;
-    --space-lg: 1.5rem;      /* reduced from 2rem */
-    --space-xl: 3rem;        /* reduced from 4rem */
+    --space-lg: 1.5rem;
+    --space-xl: 3rem;
     --transition: 0.3s ease;
 }
 
@@ -178,7 +178,9 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 .btn-white:hover { background: var(--bg-light); transform: translateY(-2px); }
 .btn-large { padding: 0.8rem 2rem; font-size: 1rem; }
 
-/* ===== HERO ===== */
+/* ========================================
+   HERO SECTION
+   ======================================== */
 .hero {
     position: relative; min-height: 80vh; display: flex; align-items: center;
     margin-top: 80px; overflow: hidden;
@@ -197,7 +199,6 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
     z-index: 1;
 }
-/* NEW: blur overlay on left side */
 .hero-blur-overlay {
     position: absolute;
     top: 0;
@@ -211,18 +212,15 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     pointer-events: none;
     z-index: 1;
 }
-/* ===== HERO CONTENT ===== */
 .hero-content {
     position: relative;
     z-index: 2;
     color: var(--white);
     max-width: 560px;
     padding: var(--space-xl) 0;
-    margin-left: 0;              /* Ensure no right margin */
-    margin-right: auto;          /* Push content left */
+    margin-left: 0;
+    margin-right: auto;
 }
-
-/* ===== GREEN BADGE ===== */
 .green-badge {
     display: inline-flex;
     align-items: center;
@@ -237,8 +235,6 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     letter-spacing: 0.5px;
     margin-bottom: var(--space-md);
 }
-
-/* ===== HERO HEADING ===== */
 .hero-content h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.8rem, 6vw, 4.5rem);
@@ -246,16 +242,12 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     line-height: 1.08;
     margin-bottom: var(--space-md);
     letter-spacing: -0.02em;
-    text-align: left;            /* Force left alignment */
+    text-align: left;
 }
-
-/* ===== HIGHLIGHT (Gold) ===== */
 .hero-content .highlight {
     color: var(--gold);
     font-style: italic;
 }
-
-/* ===== HERO SUBTITLE ===== */
 .hero-subtitle {
     font-size: 1.1rem;
     opacity: 0.92;
@@ -264,40 +256,18 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     line-height: 1.7;
     font-weight: 350;
     color: rgba(255, 255, 255, 0.9);
-    text-align: left;            /* Force left alignment */
+    text-align: left;
 }
-
-/* ===== HERO CTA BUTTONS ===== */
 .hero-cta {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Buttons align left */
+    justify-content: flex-start;
 }
 
-/* ===== RESPONSIVE TWEAKS ===== */
-@media (max-width: 768px) {
-    .hero-content {
-        max-width: 100%;
-        padding: var(--space-lg) 0;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .hero-content h1 {
-        font-size: clamp(2rem, 8vw, 2.8rem);
-        text-align: left;
-    }
-    .hero-subtitle {
-        font-size: 1rem;
-        max-width: 100%;
-        text-align: left;
-    }
-    .hero-cta {
-        justify-content: flex-start;
-    }
-}
-
-/* ===== QUICK STATS ===== */
+/* ========================================
+   QUICK STATS
+   ======================================== */
 .quick-stats {
     padding: var(--space-xl) 0;
     background: var(--bg-light);
@@ -314,86 +284,46 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 .stat-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem; }
 
 /* ========================================
-   STUDENT LIFE CARDS
+   CARD GRID (Research, Events, News)
    ======================================== */
-.student-life {
-    padding: 60px 0;
-    background: #F5F8FA;
+.card-grid {
+    padding: var(--space-xl) 0;
+    background: var(--white);
 }
-
-.student-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
 }
-
-.student-card {
-    background: #FFFFFF;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(4, 95, 130, 0.06);
-    transition: all 0.3s ease;
+.card {
+    background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-soft); transition: all var(--transition);
     border: 1px solid rgba(4, 95, 130, 0.06);
 }
-
-.student-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 30px rgba(4, 95, 130, 0.12);
+.card:hover {
+    transform: translateY(-6px); box-shadow: var(--shadow-hover);
 }
-
-.student-card h4 {
+.card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    padding: 20px 24px 0;
-    color: #1A2A3A;
-    font-weight: 600;
+    font-size: 1.2rem; padding: var(--space-md) var(--space-md) 0;
+    color: var(--text-dark); font-weight: 600;
 }
-
-.student-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    padding: 12px 16px 8px;
-    border-radius: 16px;
+.card img {
+    width: 100%; height: 180px; object-fit: cover; padding: var(--space-md);
 }
-
-.student-card p {
-    padding: 0 24px 16px;
-    color: #4A5A6A;
-    font-size: 0.9rem;
-    line-height: 1.6;
+.card p {
+    padding: 0 var(--space-md) var(--space-md);
+    color: var(--text-secondary); font-size: 0.9rem;
 }
-
-.student-card .card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 0 24px 20px;
-    font-weight: 600;
-    color: #045F82;
-    text-decoration: none;
-    transition: gap 0.3s ease;
+.card-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0 var(--space-md) var(--space-md);
+    font-weight: 600; color: var(--primary); transition: gap 0.3s; text-decoration: none;
 }
+.card-link:hover { gap: 0.8rem; color: var(--primary-dark); }
 
-.student-card .card-link:hover {
-    gap: 12px;
-    color: #0A3D5C;
-}
-
-/* ===== RESPONSIVE STUDENT ===== */
-@media (max-width: 1024px) {
-    .student-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .student-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===== SPOTLIGHT ===== */
+/* ========================================
+   SPOTLIGHT
+   ======================================== */
 .spotlight {
     padding: var(--space-xl) 0;
     background: var(--primary-dark);
@@ -416,7 +346,9 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 .spotlight-text p { opacity: 0.85; margin-bottom: var(--space-lg); line-height: 1.7; }
 .spotlight-image img { border-radius: var(--radius-lg); box-shadow: 0 10px 40px rgba(0,0,0,0.2); width: 100%; }
 
-/* ===== RESEARCH HIGHLIGHTS ===== */
+/* ========================================
+   RESEARCH HIGHLIGHTS
+   ======================================== */
 .research-highlights {
     padding: var(--space-xl) 0;
     background: var(--white);
@@ -451,7 +383,9 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 }
 .read-more:hover { gap: 0.8rem; color: var(--primary-dark); }
 
-/* ===== SEMICONDUCTOR HUB ===== */
+/* ========================================
+   SEMICONDUCTOR HUB
+   ======================================== */
 .semiconductor-hub {
     padding: var(--space-xl) 0;
     background: var(--primary);
@@ -465,7 +399,69 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 }
 .hub-content p { opacity: 0.9; font-size: 1.05rem; margin-bottom: var(--space-lg); line-height: 1.7; }
 
-/* ===== STEM SECTION ===== */
+/* ========================================
+   ACADEMICS
+   ======================================== */
+.academics {
+    padding: var(--space-xl) 0;
+    background: var(--bg-light);
+}
+.academics-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+.academic-card {
+    background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-soft); transition: all var(--transition);
+    border: 1px solid rgba(4, 95, 130, 0.06);
+}
+.academic-card:hover {
+    transform: translateY(-6px); box-shadow: var(--shadow-hover);
+}
+.academic-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; padding: var(--space-md) var(--space-md) 0;
+    color: var(--text-dark); font-weight: 600;
+}
+.academic-card img {
+    width: 100%; height: 180px; object-fit: cover; padding: var(--space-md);
+}
+.academic-card p {
+    padding: 0 var(--space-md) var(--space-md);
+    color: var(--text-secondary); font-size: 0.9rem;
+}
+
+/* ========================================
+   RESEARCH SECTION (Second Research Block)
+   ======================================== */
+.research-section {
+    padding: var(--space-xl) 0;
+    background: var(--white);
+}
+.research-card {
+    background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-soft); transition: all var(--transition);
+    border: 1px solid rgba(4, 95, 130, 0.06);
+}
+.research-card:hover {
+    transform: translateY(-6px); box-shadow: var(--shadow-hover);
+}
+.research-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; padding: var(--space-md) var(--space-md) 0;
+    color: var(--text-dark); font-weight: 600;
+}
+.research-card img {
+    width: 100%; height: 180px; object-fit: cover; padding: var(--space-md);
+}
+.research-card p {
+    padding: 0 var(--space-md) var(--space-md);
+    color: var(--text-secondary); font-size: 0.9rem;
+}
+
+/* ========================================
+   STEM SECTION (Women in STEM)
+   ======================================== */
 .stem-section {
     padding: var(--space-xl) 0;
     background: var(--bg-light);
@@ -482,32 +478,67 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 .stem-text p { color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-lg); }
 .stem-image img { border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); width: 100%; }
 
-/* ===== SPLIT SECTION ===== */
-.split-section {
-    display: grid; grid-template-columns: 1fr 1fr;
-    min-height: 350px;
+/* ========================================
+   STUDENT LIFE
+   ======================================== */
+.student-life {
+    padding: var(--space-xl) 0;
+    background: var(--bg-light);
 }
-.split-left {
-    background: var(--primary);
-    color: var(--white);
-    padding: var(--space-xl);
-    display: flex; align-items: center;
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
-.split-right {
-    background: var(--primary-dark);
-    color: var(--white);
-    padding: var(--space-xl);
-    display: flex; align-items: center;
+.student-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(4, 95, 130, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(4, 95, 130, 0.06);
 }
-.split-content { max-width: 420px; }
-.split-content h2 {
+.student-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(4, 95, 130, 0.12);
+}
+.student-card h4 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem; font-weight: 700; margin-bottom: var(--space-md);
+    font-size: 1.2rem;
+    padding: 20px 24px 0;
+    color: #1A2A3A;
+    font-weight: 600;
 }
-.split-content p { opacity: 0.9; line-height: 1.7; margin-bottom: var(--space-lg); }
+.student-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    padding: 12px 16px 8px;
+    border-radius: 16px;
+}
+.student-card p {
+    padding: 0 24px 16px;
+    color: #4A5A6A;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.student-card .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 24px 20px;
+    font-weight: 600;
+    color: #045F82;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+}
+.student-card .card-link:hover {
+    gap: 12px;
+    color: #0A3D5C;
+}
 
 /* ========================================
-   SPLIT SECTION - Innovation & International
+   SPLIT SECTION (Innovation & International)
    ======================================== */
 .split-section {
     display: grid;
@@ -516,7 +547,6 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     margin: 0;
     padding: 0;
 }
-
 .split-left {
     background: #045F82;
     color: #FFFFFF;
@@ -525,7 +555,6 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     align-items: center;
     justify-content: flex-start;
 }
-
 .split-right {
     background: #0A3D5C;
     color: #FFFFFF;
@@ -534,11 +563,9 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     align-items: center;
     justify-content: flex-start;
 }
-
 .split-content {
     max-width: 440px;
 }
-
 .split-content h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
@@ -547,7 +574,6 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     color: #FFFFFF;
     line-height: 1.2;
 }
-
 .split-content p {
     opacity: 0.85;
     line-height: 1.7;
@@ -555,7 +581,6 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.9);
 }
-
 .split-content .btn {
     background: #FFFFFF;
     color: #045F82;
@@ -571,47 +596,113 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     border: none;
     cursor: pointer;
 }
-
 .split-content .btn:hover {
     background: #D4A843;
     color: #FFFFFF;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
 .split-content .btn i {
     font-size: 0.85rem;
 }
 
-/* ===== RESPONSIVE SPLIT ===== */
-@media (max-width: 1024px) {
-    .split-section {
-        grid-template-columns: 1fr;
-    }
-    .split-left, .split-right {
-        padding: 40px 30px;
-        justify-content: center;
-        text-align: center;
-    }
-    .split-content {
-        max-width: 100%;
-        text-align: center;
-    }
-    .split-content .btn {
-        justify-content: center;
-    }
+/* ========================================
+   FOOTER - Clean & Consistent
+   ======================================== */
+.footer {
+    background: #0A3D5C;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 60px 0 30px;
+    border-top: 4px solid #D4A843;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+.footer-brand img {
+    height: 55px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    margin-bottom: 8px;
+}
+.footer-brand p {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.5px;
+}
+.footer-brand .tagline {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 280px;
+    line-height: 1.5;
+}
+.footer-col h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #D4A843;
+    border-radius: 2px;
+}
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+.footer-col ul li a {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 2px 0;
+}
+.footer-col ul li a:hover {
+    color: #D4A843;
+    transform: translateX(4px);
+}
+.footer-bottom {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.3px;
+}
+.footer-bottom span {
+    color: #D4A843;
+    opacity: 0.8;
 }
 
-@media (max-width: 480px) {
-    .split-left, .split-right {
-        padding: 30px 20px;
-    }
-    .split-content h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* ===== RESPONSIVE ===== */
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
 @media (max-width: 1024px) {
     .nav-links { display: none; }
     .hamburger { display: block; }
@@ -626,9 +717,11 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     .nav-cta { display: none; }
     .spotlight-content, .stem-content { grid-template-columns: 1fr; }
     .spotlight-image { order: -1; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
     .split-section { grid-template-columns: 1fr; }
+    .student-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
     .top-bar-content { flex-direction: column; align-items: stretch; gap: 0.3rem; }
     .top-bar-right { justify-content: center; flex-wrap: wrap; }
@@ -637,12 +730,26 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     .hero-content h1 { font-size: 2rem; }
     .services-sidebar { width: 100%; right: -100%; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
-    .hero-blur-overlay { width: 60%; } /* more blur on mobile */
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 25px; }
+    .footer-brand { grid-column: 1 / -1; align-items: center; text-align: center; }
+    .footer-brand .tagline { max-width: 100%; text-align: center; }
+    .footer-col h4::after { left: 0; }
+    .hero-blur-overlay { width: 60%; }
+    .split-left, .split-right { padding: 40px 30px; justify-content: center; text-align: center; }
+    .split-content { max-width: 100%; text-align: center; }
+    .split-content .btn { justify-content: center; }
+    .student-grid { grid-template-columns: 1fr; }
 }
+
 @media (max-width: 480px) {
     .hero-cta { flex-direction: column; }
     .btn-large { width: 100%; justify-content: center; }
     .stats-grid { grid-template-columns: 1fr; }
     .cards, .academics-grid, .student-grid, .research-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+    .footer-col { text-align: center; }
+    .footer-col h4::after { left: 50%; transform: translateX(-50%); }
+    .footer-col ul li a:hover { transform: none; }
+    .split-left, .split-right { padding: 30px 20px; }
+    .split-content h2 { font-size: 1.5rem; }
 }
