@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('aria-hidden', 'true');
     iframe.setAttribute('tabindex', '-1');
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
     container.appendChild(iframe);
 });
 
