@@ -202,12 +202,12 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     position: absolute;
     top: 0;
     left: 0;
-    width: 45%;
+    width: 30%;
     height: 100%;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    mask-image: linear-gradient(to right, black 50%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    mask-image: linear-gradient(to right, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 40%, transparent 100%);
     pointer-events: none;
     z-index: 1;
 }
