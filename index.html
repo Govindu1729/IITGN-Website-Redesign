@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Gandhinagar | Engineering Excellence & Green Innovation</title>
+    <!-- Google Fonts: Cormorant Garamond + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Accessibility & Tools Floating Bar -->
+    <div class="a11y-bar">
+        <button id="grayscaleToggle" aria-label="Toggle Grayscale"><i class="fas fa-adjust"></i></button>
+        <button id="contrastToggle" aria-label="Toggle High Contrast"><i class="fas fa-circle-half-stroke"></i></button>
+    </div>
+
+    <!-- Header & Navigation (UPenn Style + Glassmorphism) -->
+    <header class="navbar glass" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">IIT <strong>Gandhinagar</strong></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item mega-item">
+                        <a href="#">About <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="mega-content">
+                                <div class="mega-col">
+                                    <h4>Institute</h4>
+                                    <a href="#">Overview</a>
+                                    <a href="#">Director's Message</a>
+                                    <a href="#">Mission & Vision</a>
+                                </div>
+                                <div class="mega-col">
+                                    <h4>Campus Life</h4>
+                                    <a href="#">Green Campus (GRIHA)</a>
+                                    <a href="#">Student Activities</a>
+                                    <a href="#">Hostels & Dining</a>
+                                </div>
+                                <div class="mega-col mega-highlight">
+                                    <h4>5-Star GRIHA Rated</h4>
+                                    <p>Discover our commitment to sustainability through our award-winning green campus architecture.</p>
+                                    <a href="#" class="mega-btn">Explore Campus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#">Academics</a></li>
+                    <li class="nav-item"><a href="#">Admissions</a></li>
+                    <li class="nav-item"><a href="#">Research</a></li>
+                    <li class="nav-item"><a href="#">People</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                <a href="#" class="btn-primary">Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (UChicago Style Cinematic) -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle fade-in">Welcome to the Future of Engineering</p>
+            <h1 class="hero-title fade-in">Innovating Today for a <em>Sustainable</em> Tomorrow</h1>
+            <p class="hero-text fade-in">A premier institution committed to academic excellence, interdisciplinary research, and a 5-star green campus ecosystem.</p>
+            <div class="hero-ctas fade-in">
+                <a href="#" class="btn-primary">Prospective Students <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn-secondary">Explore Research</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <p>Scroll</p>
+        </div>
+    </section>
+
+    <!-- Research & Innovation (MIT Style Grid) -->
+    <section class="section-padding" id="research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Innovation</span>
+                <h2 class="section-title">Research that Transforms Lives</h2>
+                <p class="section-subtitle">From advanced robotics to climate tech, our faculty and students are at the forefront of global innovation.</p>
+            </div>
+
+            <div class="card-grid">
+                <!-- Card 1 -->
+                <div class="research-card reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Robotics Lab">
+                        <span class="card-tag">Engineering</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Advanced Robotics & AI</h3>
+                        <p>Developing autonomous systems to aid healthcare diagnostics and industrial automation.</p>
+                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="research-card reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Earth Science">
+                        <span class="card-tag">Sustainability</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Climate Change Mitigation</h3>
+                        <p>Pioneering new methods in carbon capture and sustainable materials engineering.</p>
+                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="research-card reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Biotech">
+                        <span class="card-tag">Sciences</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Biotechnology & Healthcare</h3>
+                        <p>Interdisciplinary research bridging biology, chemistry, and computational sciences.</p>
+                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events (McGill Minimalism + MIT Grid) -->
+    <section class="section-padding bg-light" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Campus Pulse</span>
+                <h2 class="section-title">Latest News & Events</h2>
+            </div>
+
+            <div class="news-layout">
+                <article class="news-featured reveal">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Convocation">
+                    <div class="news-content">
+                        <span class="news-date">August 15, 2024</span>
+                        <h3>IITGN Celebrates 15th Convocation with Record Placements</h3>
+                        <p>Over 300 students graduated this year, with top recruiters offering roles in AI, sustainable tech, and finance. The ceremony was graced by eminent scientists from across the globe.</p>
+                        <a href="#" class="card-link">Read Full Story</a>
+                    </div>
+                </article>
+
+                <div class="news-list">
+                    <article class="news-item reveal">
+                        <div class="news-date-block"><span class="day">12</span><span class="month">SEP</span></div>
+                        <div class="news-item-content">
+                            <h4>International Symposium on Quantum Computing</h4>
+                            <p>A 3-day event bringing together top researchers in quantum mechanics.</p>
+                        </div>
+                    </article>
+                    <article class="news-item reveal">
+                        <div class="news-date-block"><span class="day">05</span><span class="month">SEP</span></div>
+                        <div class="news-item-content">
+                            <h4>Students Win Smart India Hackathon Grand Prize</h4>
+                            <p>Team Innovators developed an AI-driven water purification monitoring system.</p>
+                        </div>
+                    </article>
+                    <article class="news-item reveal">
+                        <div class="news-date-block"><span class="day">28</span><span class="month">AUG</span></div>
+                        <div class="news-item-content">
+                            <h4>New Centre for Sustainable Energy Launched</h4>
+                            <p>Focusing on solar and hydrogen energy research to combat climate change.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Princeton Elegance) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>IIT Gandhinagar</h3>
+                <p>Paldi Village, Koba, Gandhinagar, Gujarat 382355</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#">Admissions</a>
+                <a href="#">Departments</a>
+                <a href="#">Faculty Directory</a>
+                <a href="#">Campus Life</a>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#">Library</a>
+                <a href="#">Career Development</a>
+                <a href="#">Research Parks</a>
+                <a href="#">Alumni Network</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Phone: +91 79 2395 2000</p>
+                <p>Email: info@iitgn.ac.in</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Indian Institute of Technology Gandhinagar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
