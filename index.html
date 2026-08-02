@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIT Gandhinagar | Engineering Excellence & Green Innovation</title>
-    <!-- Google Fonts: Cormorant Garamond + Inter -->
+    <title>IIT Gandhinagar | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,213 +12,409 @@
 </head>
 <body>
 
-    <!-- Accessibility & Tools Floating Bar -->
+    <!-- ===== ACCESSIBILITY BAR ===== -->
     <div class="a11y-bar">
         <button id="grayscaleToggle" aria-label="Toggle Grayscale"><i class="fas fa-adjust"></i></button>
         <button id="contrastToggle" aria-label="Toggle High Contrast"><i class="fas fa-circle-half-stroke"></i></button>
     </div>
 
-    <!-- Header & Navigation (UPenn Style + Glassmorphism) -->
-    <header class="navbar glass" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-text">IIT <strong>Gandhinagar</strong></span>
-            </a>
-            
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li class="nav-item mega-item">
-                        <a href="#">About <i class="fas fa-chevron-down"></i></a>
-                        <div class="mega-menu">
-                            <div class="mega-content">
-                                <div class="mega-col">
-                                    <h4>Institute</h4>
-                                    <a href="#">Overview</a>
-                                    <a href="#">Director's Message</a>
-                                    <a href="#">Mission & Vision</a>
-                                </div>
-                                <div class="mega-col">
-                                    <h4>Campus Life</h4>
-                                    <a href="#">Green Campus (GRIHA)</a>
-                                    <a href="#">Student Activities</a>
-                                    <a href="#">Hostels & Dining</a>
-                                </div>
-                                <div class="mega-col mega-highlight">
-                                    <h4>5-Star GRIHA Rated</h4>
-                                    <p>Discover our commitment to sustainability through our award-winning green campus architecture.</p>
-                                    <a href="#" class="mega-btn">Explore Campus</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a href="#">Academics</a></li>
-                    <li class="nav-item"><a href="#">Admissions</a></li>
-                    <li class="nav-item"><a href="#">Research</a></li>
-                    <li class="nav-item"><a href="#">People</a></li>
+    <!-- ===== TOP BAR ===== -->
+    <header class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.504 11.24h-6.67l-5.22-6.817-5.964 6.817H1.75l7.73-8.84L1.25 2.25h6.84l4.713 6.231L18.244 2.25z"/></svg></a></li>
                 </ul>
-            </nav>
-
-            <div class="nav-actions">
-                <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
-                <a href="#" class="btn-primary">Apply Now</a>
-                <button class="hamburger" id="hamburger" aria-label="Menu">
-                    <span></span><span></span><span></span>
-                </button>
+                <div class="top-bar-right">
+                    <a href="#" class="contact-link">Contact</a>
+                    <div class="accessibility-dropdown">
+                        <button class="accessibility-toggle"><i class="fas fa-universal-access"></i></button>
+                        <div class="accessibility-menu">
+                            <button onclick="increaseFont()"><b>A+</b></button>
+                            <button onclick="resetFont()"><u><b>A</b></u></button>
+                            <button onclick="decreaseFont()"><b>A-</b></button>
+                            <button onclick="toggleGrayscale()"><i class="fas fa-circle"></i> Grayscale</button>
+                            <button onclick="resetSettings()"><i class="fas fa-undo"></i> Reset</button>
+                        </div>
+                    </div>
+                    <div class="language-switcher">
+                        <a href="#" class="active">English</a> <span>|</span> <a href="#">हिंदी</a>
+                    </div>
+                    <button class="services-toggle" onclick="toggleServices()">Internal Services <i class="fas fa-chevron-down"></i></button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section (UChicago Style Cinematic) -->
+    <!-- ===== SERVICES SIDEBAR ===== -->
+    <div id="services-sidebar" class="services-sidebar">
+        <button class="sidebar-close" onclick="toggleServices()">&times;</button>
+        <h3>Internal Services</h3>
+        <ul>
+            <li><a href="#">Internal Website (IWS)</a></li>
+            <li><a href="#">Webmail</a></li>
+            <li><a href="#">Career Development Services</a></li>
+            <li><a href="#">Scholarships and Financial Aid</a></li>
+            <li><a href="#">Institute Management System (IMS)</a></li>
+            <li><a href="#">Medical Centre</a></li>
+            <li><a href="#">Guest House</a></li>
+            <li><a href="#">Internal Complaints Committee</a></li>
+            <li><a href="#">IITGN Counseling Service</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">RTI</a></li>
+            <li><a href="#">ISTF</a></li>
+            <li><a href="#">List of Holidays</a></li>
+            <li><a href="#">Campus Weather Monitoring</a></li>
+            <li><a href="#">Subscribe</a></li>
+        </ul>
+    </div>
+
+    <!-- ===== MAIN NAVIGATION ===== -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <img src="https://iitgn.ac.in/assets/img/IITGN-5.png" alt="IIT Gandhinagar">
+                </a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Board of Governors</a></li>
+                            <li><a href="#">Mission and Vision</a></li>
+                            <li><a href="#">Campus</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Academics <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Academic Affairs</a></li>
+                            <li><a href="#">Admissions</a></li>
+                            <li><a href="#">Departments</a></li>
+                            <li><a href="#">Academic Calender</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Research <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Research Highlights</a></li>
+                            <li><a href="#">Facilities</a></li>
+                            <li><a href="#">Centres</a></li>
+                            <li><a href="#">Research Park</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">People <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Faculty</a></li>
+                            <li><a href="#">Staff</a></li>
+                            <li><a href="#">PhD Scholars</a></li>
+                            <li><a href="#">Alumni PhD Scholars</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Administration <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Director</a></li>
+                            <li><a href="#">Finance Committee</a></li>
+                            <li><a href="#">Building and Works Committee</a></li>
+                            <li><a href="#">Academic Officials</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#" class="btn btn-primary">Careers</a>
+                    <a href="#" class="btn btn-secondary">Giving</a>
+                </div>
+                <button class="hamburger" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-subtitle fade-in">Welcome to the Future of Engineering</p>
-            <h1 class="hero-title fade-in">Innovating Today for a <em>Sustainable</em> Tomorrow</h1>
-            <p class="hero-text fade-in">A premier institution committed to academic excellence, interdisciplinary research, and a 5-star green campus ecosystem.</p>
-            <div class="hero-ctas fade-in">
-                <a href="#" class="btn-primary">Prospective Students <i class="fas fa-arrow-right"></i></a>
-                <a href="#" class="btn-secondary">Explore Research</a>
-            </div>
+        <div class="hero-bg">
+            <div class="youtube-background" data-video-url="s45Rt1s-hAM"></div>
+            <div class="hero-overlay"></div>
         </div>
-        <div class="scroll-indicator">
-            <span></span>
-            <p>Scroll</p>
-        </div>
-    </section>
-
-    <!-- Research & Innovation (MIT Style Grid) -->
-    <section class="section-padding" id="research">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Innovation</span>
-                <h2 class="section-title">Research that Transforms Lives</h2>
-                <p class="section-subtitle">From advanced robotics to climate tech, our faculty and students are at the forefront of global innovation.</p>
-            </div>
-
-            <div class="card-grid">
-                <!-- Card 1 -->
-                <div class="research-card reveal">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Robotics Lab">
-                        <span class="card-tag">Engineering</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>Advanced Robotics & AI</h3>
-                        <p>Developing autonomous systems to aid healthcare diagnostics and industrial automation.</p>
-                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="research-card reveal">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Earth Science">
-                        <span class="card-tag">Sustainability</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>Climate Change Mitigation</h3>
-                        <p>Pioneering new methods in carbon capture and sustainable materials engineering.</p>
-                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="research-card reveal">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Biotech">
-                        <span class="card-tag">Sciences</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>Biotechnology & Healthcare</h3>
-                        <p>Interdisciplinary research bridging biology, chemistry, and computational sciences.</p>
-                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            <div class="hero-content">
+                <div class="green-badge"><i class="fas fa-leaf"></i> India's First 5-Star GRIHA Green Campus</div>
+                <h1>Thinking Across <br><span class="highlight">Boundaries</span></h1>
+                <p class="hero-subtitle">At IIT Gandhinagar, research is embedded in everyday learning and crosses disciplinary boundaries to address complex questions. By working at such intersections, students and faculty allow for new perspectives to shape research methods, outputs, and outcomes.[reference:8]</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary btn-large"><i class="fas fa-graduation-cap"></i> Apply Now</a>
+                    <a href="#" class="btn btn-outline btn-large"><i class="fas fa-play-circle"></i> Virtual Tour</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- News & Events (McGill Minimalism + MIT Grid) -->
-    <section class="section-padding bg-light" id="news">
+    <!-- ===== QUICK STATS ===== -->
+    <section class="quick-stats">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Campus Pulse</span>
-                <h2 class="section-title">Latest News & Events</h2>
+            <div class="stats-grid">
+                <div class="stat-item"><div class="stat-number" data-count="400">0</div><div class="stat-label">Acres Green Campus</div></div>
+                <div class="stat-item"><div class="stat-number" data-count="90">0</div><div class="stat-label">Startups Supported</div></div>
+                <div class="stat-item"><div class="stat-number" data-count="40">0</div><div class="stat-label">Companies Hosted</div></div>
+                <div class="stat-item"><div class="stat-number" data-count="100">0</div><div class="stat-label">Patent Filings</div></div>
             </div>
+        </div>
+    </section>
 
-            <div class="news-layout">
-                <article class="news-featured reveal">
-                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Convocation">
-                    <div class="news-content">
-                        <span class="news-date">August 15, 2024</span>
-                        <h3>IITGN Celebrates 15th Convocation with Record Placements</h3>
-                        <p>Over 300 students graduated this year, with top recruiters offering roles in AI, sustainable tech, and finance. The ceremony was graced by eminent scientists from across the globe.</p>
-                        <a href="#" class="card-link">Read Full Story</a>
-                    </div>
-                </article>
-
-                <div class="news-list">
-                    <article class="news-item reveal">
-                        <div class="news-date-block"><span class="day">12</span><span class="month">SEP</span></div>
-                        <div class="news-item-content">
-                            <h4>International Symposium on Quantum Computing</h4>
-                            <p>A 3-day event bringing together top researchers in quantum mechanics.</p>
-                        </div>
-                    </article>
-                    <article class="news-item reveal">
-                        <div class="news-date-block"><span class="day">05</span><span class="month">SEP</span></div>
-                        <div class="news-item-content">
-                            <h4>Students Win Smart India Hackathon Grand Prize</h4>
-                            <p>Team Innovators developed an AI-driven water purification monitoring system.</p>
-                        </div>
-                    </article>
-                    <article class="news-item reveal">
-                        <div class="news-date-block"><span class="day">28</span><span class="month">AUG</span></div>
-                        <div class="news-item-content">
-                            <h4>New Centre for Sustainable Energy Launched</h4>
-                            <p>Focusing on solar and hydrogen energy research to combat climate change.</p>
-                        </div>
-                    </article>
+    <!-- ===== 3 CARD GRID ===== -->
+    <section class="card-grid">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <h3>Research</h3>
+                    <img src="https://iitgn.ac.in/assets/img/home/research10.jpg" alt="Research">
+                    <p>Addressing global challenges through interdisciplinary inquiry and scientific innovation.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <h3>Events</h3>
+                    <img src="https://iitgn.ac.in/assets/img/home/events2.png" alt="Events">
+                    <p>A curated calendar of academic conferences, workshops, and vibrant cultural activities.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <h3>News</h3>
+                    <img src="https://iitgn.ac.in/assets/img/home/news07012026.jpg" alt="News">
+                    <p>Latest announcements, achievements, and updates from the IITGN community.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (Princeton Elegance) -->
+    <!-- ===== SPOTLIGHT ===== -->
+    <section class="spotlight">
+        <div class="container">
+            <div class="spotlight-content">
+                <div class="spotlight-text">
+                    <span class="spotlight-tag">In The Spotlight</span>
+                    <h2>IIT Gandhinagar Welcomes New <br>BTech Batch</h2>
+                    <p>Indian Institute of Technology Gandhinagar (IITGN) welcomed its new BTech students with the commencement of its flagship Foundation Programme on July 21, 2026. Spread over four weeks, till August 15, 2026, the programme offers an immersive introduction to life at IITGN, preparing students for their academic journey and nurturing personal growth, leadership and a spirit of exploration.[reference:9]</p>
+                    <a href="#" class="btn btn-primary">Know More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="spotlight-image">
+                    <img src="https://iitgn.ac.in/assets/img/home/foundation2026.jpg" alt="Foundation Programme 2026">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESEARCH HIGHLIGHTS ===== -->
+    <section class="research-highlights">
+        <div class="container">
+            <h2 class="section-title">Research <span class="highlight">Highlights</span></h2>
+            <div class="research-grid">
+                <div class="research-item">
+                    <h4>Exploring A Smarter Way to Build Climate-Resilient Roads</h4>
+                    <p>IITGN researchers combine climate data, thermal modelling, and machine learning to improve concrete pavement design recommendations. Published by <a href="#">Press Information Bureau</a>, <a href="#">Tech Xplore</a> and <a href="#">Skill Outlook</a>.[reference:10]</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="research-item">
+                    <h4>Powered by Purpose: How Cellegant Energy Systems is Building India's Hydrogen Future</h4>
+                    <p>Prof. Atul Bhargav talks about transforming hydrogen fuel cell research into practical products and the challenges of building a deep-tech startup in India. Read more at the <a href="#">IITGN News</a>.[reference:11]</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="research-item">
+                    <h4>Seeing Plant Tissues in a New Light</h4>
+                    <p>Research teams from IITGN and the Regional Centre for Biotechnology, Faridabad, have developed a more precise method to visualise plant water-conducting tissue, published by <a href="#">Press Information Bureau</a> and <a href="#">Skill Outlook</a>.[reference:12]</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEMICONDUCTOR HUB ===== -->
+    <section class="semiconductor-hub">
+        <div class="container">
+            <div class="hub-content">
+                <h2>IIT Gandhinagar to Launch ₹190 Crore Semiconductor Training Hub</h2>
+                <p>In alignment with the Government of India's Semiconductor Mission, the Silicon and Advanced Semiconductor Manufacturing Research and Training Hub (SAMARTH) will soon be launched at IIT Gandhinagar to train 10,000+ individuals with hands-on exposure in semiconductor technology.[reference:13]</p>
+                <a href="#" class="btn btn-white">Know More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ACADEMICS ===== -->
+    <section class="academics">
+        <div class="container">
+            <h2 class="section-title">Academics</h2>
+            <p class="section-subtitle">Academic excellence rooted in flexibility, empowering students to explore broadly and specialise thoughtfully.[reference:14]</p>
+            <div class="academics-grid">
+                <div class="academic-card">
+                    <h4>Academic Affairs</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/academic_affiars.jpg" alt="Academic Affairs">
+                    <p>Curriculum, academic policies, and comprehensive programs across disciplines.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="academic-card">
+                    <h4>Admissions</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/admissions.png" alt="Admissions">
+                    <p>Guidelines for students applying to undergraduate and graduate programs.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="academic-card">
+                    <h4>Departments</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/departments.png" alt="Departments">
+                    <p>Discover the specific areas of study, faculty profiles, and research opportunities.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESEARCH SECTION ===== -->
+    <section class="research-section">
+        <div class="container">
+            <h2 class="section-title">Research</h2>
+            <p class="section-subtitle">Growing hub of interdisciplinary research and innovation that addresses pressing global challenges.[reference:15]</p>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h4>Research Highlights</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/Research-Highlights.png" alt="Research Highlights">
+                    <p>Showcasing breakthrough discoveries by our faculty and students.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="research-card">
+                    <h4>Facilities</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/facilities.png" alt="Facilities">
+                    <p>State-of-the-art research infrastructure enabling high-quality scientific exploration.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="research-card">
+                    <h4>Centres</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/center.png" alt="Centres">
+                    <p>Collaborative research in science, engineering, and social sciences.</p>
+                    <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WOMEN IN STEM ===== -->
+    <section class="stem-section">
+        <div class="container">
+            <div class="stem-content">
+                <div class="stem-text">
+                    <h2>Celebrating Women in <span class="highlight">STEM</span></h2>
+                    <p>The 2nd ASEAN–India Women Scientists Conclave 2026 brought together leading women researchers and innovators from across ASEAN and India to foster scientific collaboration and regional partnerships. IIT Gandhinagar proudly celebrates the participation of two distinguished alumni, Dr Deekshi Angira and Dr Gayathri Purushothaman, in this event.[reference:16]</p>
+                    <a href="#" class="btn btn-primary">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="stem-image">
+                    <img src="https://iitgn.ac.in/assets/img/home/stem.jpeg" alt="Women in STEM">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STUDENT LIFE ===== -->
+    <section class="student-life">
+        <div class="container">
+            <h2 class="section-title">Student Life</h2>
+            <p class="section-subtitle">At IIT Gandhinagar, living and learning are closely integrated. The residential campus supports academic excellence while offering avenues for cultural expression, technical exploration, and creative growth.[reference:17]</p>
+            <div class="student-grid">
+                <div class="student-card">
+                    <h4>Campus Life</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/sl01.png" alt="Campus Life">
+                    <p>Sustainable housing and hygienic dining facilities for an enriching residential experience.</p>
+                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="student-card">
+                    <h4>Sports and Recreation</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/sl02.png" alt="Sports and Recreation">
+                    <p>Access to a state-of-the-art sports complex, diverse clubs, and vibrant student events.</p>
+                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="student-card">
+                    <h4>Well Being</h4>
+                    <img src="https://iitgn.ac.in/assets/img/home/sl03.png" alt="Well Being">
+                    <p>Holistic support and initiatives for mental, physical, and emotional wellness.</p>
+                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INNOVATION & INTERNATIONAL ===== -->
+    <section class="split-section">
+        <div class="split-left">
+            <div class="split-content">
+                <h2>Innovation & Incubation</h2>
+                <p>By supporting over 90 startups, hosting 40+ companies, and advancing 100+ patent filings, the Innovation and Entrepreneurship Center and Research Park at IITGN actively advance industry collaboration and technology commercialisation.</p>
+                <a href="#" class="btn btn-white">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="split-right">
+            <div class="split-content">
+                <h2>International Relations</h2>
+                <p>In 2025, IITGN signed 10+ MoUs with leading global universities, engaged with 40+ international institutions and agencies, conducted multiple joint international workshops, and expanded its academic network across Asia, the USA, and Africa.</p>
+                <a href="#" class="btn btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3>IIT Gandhinagar</h3>
-                <p>Paldi Village, Koba, Gandhinagar, Gujarat 382355</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://iitgn.ac.in/assets/img/Final_IITGN_Logo_symmetric.svg" alt="IIT Gandhinagar" style="height:50px;">
+                    <p>GSTIN: 24AAATI7352M1ZF</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Act &amp; Statutes</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Founding Director</a></li>
+                        <li><a href="#">Advisory Council</a></li>
+                        <li><a href="#">Leadership Conclave</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Tenders &amp; Auctions</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Student Affairs</a></li>
+                        <li><a href="#">Internal Website</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Academics</h4>
+                    <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Students</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href="#">Admissions</a>
-                <a href="#">Departments</a>
-                <a href="#">Faculty Directory</a>
-                <a href="#">Campus Life</a>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IIT Gandhinagar | GSTIN: 24AAATI7352M1ZF</p>
             </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <a href="#">Library</a>
-                <a href="#">Career Development</a>
-                <a href="#">Research Parks</a>
-                <a href="#">Alumni Network</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>Phone: +91 79 2395 2000</p>
-                <p>Email: info@iitgn.ac.in</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Indian Institute of Technology Gandhinagar. All Rights Reserved.</p>
         </div>
     </footer>
 
