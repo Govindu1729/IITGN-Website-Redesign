@@ -81,8 +81,7 @@
                     <img src="https://iitgn.ac.in/assets/img/IITGN-5.png" alt="IIT Gandhinagar" />
                 </a>
                 <ul class="nav-links">
-                    <li class="dropdown">
-                        <a href="#">About <i class="fas fa-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#">About <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Board of Governors</a></li>
                             <li><a href="#">Mission and Vision</a></li>
@@ -90,8 +89,7 @@
                             <li><a href="#">Newsletter</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#">Academics <i class="fas fa-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#">Academics <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Academic Affairs</a></li>
                             <li><a href="#">Admissions</a></li>
@@ -99,8 +97,7 @@
                             <li><a href="#">Academic Calender</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#">Research <i class="fas fa-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#">Research <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Research Highlights</a></li>
                             <li><a href="#">Facilities</a></li>
@@ -108,8 +105,7 @@
                             <li><a href="#">Research Park</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#">People <i class="fas fa-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#">People <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Faculty</a></li>
                             <li><a href="#">Staff</a></li>
@@ -117,8 +113,7 @@
                             <li><a href="#">Alumni PhD Scholars</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#">Administration <i class="fas fa-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#">Administration <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Director</a></li>
                             <li><a href="#">Finance Committee</a></li>
@@ -139,8 +134,10 @@
     <!-- ===== HERO SECTION ===== -->
     <section class="hero">
         <div class="hero-bg">
-            <div class="youtube-background" data-video-url="s45Rt1s-hAM"></div>
+            <div class="youtube-background" data-video-url="s45Rt1s-hAM" data-start="10"></div>
             <div class="hero-overlay"></div>
+            <!-- NEW: blur overlay on left side -->
+            <div class="hero-blur-overlay"></div>
         </div>
         <div class="container">
             <div class="hero-content">
@@ -155,14 +152,14 @@
         </div>
     </section>
 
-    <!-- ===== QUICK STATS ===== -->
+    <!-- ===== QUICK STATS (with float-item class) ===== -->
     <section class="quick-stats">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item"><div class="stat-number" data-count="400">0</div><div class="stat-label">Acres Green Campus</div></div>
-                <div class="stat-item"><div class="stat-number" data-count="90">0</div><div class="stat-label">Startups Supported</div></div>
-                <div class="stat-item"><div class="stat-number" data-count="40">0</div><div class="stat-label">Companies Hosted</div></div>
-                <div class="stat-item"><div class="stat-number" data-count="100">0</div><div class="stat-label">Patent Filings</div></div>
+                <div class="stat-item float-item"><div class="stat-number" data-count="400">0</div><div class="stat-label">Acres Green Campus</div></div>
+                <div class="stat-item float-item"><div class="stat-number" data-count="90">0</div><div class="stat-label">Startups Supported</div></div>
+                <div class="stat-item float-item"><div class="stat-number" data-count="40">0</div><div class="stat-label">Companies Hosted</div></div>
+                <div class="stat-item float-item"><div class="stat-number" data-count="100">0</div><div class="stat-label">Patent Filings</div></div>
             </div>
         </div>
     </section>
@@ -171,19 +168,19 @@
     <section class="card-grid">
         <div class="container">
             <div class="cards">
-                <div class="card">
+                <div class="card float-item">
                     <h3>Research</h3>
                     <img src="https://iitgn.ac.in/assets/img/home/research10.jpg" alt="Research" />
                     <p>Addressing global challenges through interdisciplinary inquiry and scientific innovation.</p>
                     <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="card">
+                <div class="card float-item">
                     <h3>Events</h3>
                     <img src="https://iitgn.ac.in/assets/img/home/events2.png" alt="Events" />
                     <p>A curated calendar of academic conferences, workshops, and vibrant cultural activities.</p>
                     <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="card">
+                <div class="card float-item">
                     <h3>News</h3>
                     <img src="https://iitgn.ac.in/assets/img/home/news07012026.jpg" alt="News" />
                     <p>Latest announcements, achievements, and updates from the IITGN community.</p>
@@ -215,17 +212,17 @@
         <div class="container">
             <h2 class="section-title">Research <span class="highlight">Highlights</span></h2>
             <div class="research-grid">
-                <div class="research-item">
+                <div class="research-item float-item">
                     <h4>Climate-Resilient Roads</h4>
                     <p>IITGN researchers combine climate data, thermal modelling, and machine learning to improve concrete pavement design recommendations.</p>
                     <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="research-item">
+                <div class="research-item float-item">
                     <h4>Hydrogen Future</h4>
                     <p>Prof. Atul Bhargav talks about transforming hydrogen fuel cell research into practical products and building a deep-tech startup in India.</p>
                     <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="research-item">
+                <div class="research-item float-item">
                     <h4>Plant Tissue Imaging</h4>
                     <p>Research teams from IITGN and Regional Centre for Biotechnology developed a precise method to visualise plant water-conducting tissue.</p>
                     <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
@@ -251,19 +248,19 @@
             <h2 class="section-title">Academics</h2>
             <p class="section-subtitle">Academic excellence rooted in flexibility, empowering students to explore broadly and specialise thoughtfully.</p>
             <div class="academics-grid">
-                <div class="academic-card">
+                <div class="academic-card float-item">
                     <h4>Academic Affairs</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/academic_affiars.jpg" alt="Academic Affairs" />
                     <p>Curriculum, academic policies, and comprehensive programs across disciplines.</p>
                     <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="academic-card">
+                <div class="academic-card float-item">
                     <h4>Admissions</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/admissions.png" alt="Admissions" />
                     <p>Guidelines for students applying to undergraduate and graduate programs.</p>
                     <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="academic-card">
+                <div class="academic-card float-item">
                     <h4>Departments</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/departments.png" alt="Departments" />
                     <p>Discover the specific areas of study, faculty profiles, and research opportunities.</p>
@@ -279,19 +276,19 @@
             <h2 class="section-title">Research</h2>
             <p class="section-subtitle">Growing hub of interdisciplinary research and innovation that addresses pressing global challenges.</p>
             <div class="research-grid">
-                <div class="research-card">
+                <div class="research-card float-item">
                     <h4>Research Highlights</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/Research-Highlights.png" alt="Research Highlights" />
                     <p>Showcasing breakthrough discoveries by our faculty and students.</p>
                     <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="research-card">
+                <div class="research-card float-item">
                     <h4>Facilities</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/facilities.png" alt="Facilities" />
                     <p>State-of-the-art research infrastructure enabling high-quality scientific exploration.</p>
                     <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="research-card">
+                <div class="research-card float-item">
                     <h4>Centres</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/center.png" alt="Centres" />
                     <p>Collaborative research in science, engineering, and social sciences.</p>
@@ -323,19 +320,19 @@
             <h2 class="section-title">Student Life</h2>
             <p class="section-subtitle">Living and learning are closely integrated. The residential campus supports academic excellence while offering avenues for cultural expression and creative growth.</p>
             <div class="student-grid">
-                <div class="student-card">
+                <div class="student-card float-item">
                     <h4>Campus Life</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/sl01.png" alt="Campus Life" />
                     <p>Sustainable housing and hygienic dining facilities for an enriching residential experience.</p>
                     <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="student-card">
+                <div class="student-card float-item">
                     <h4>Sports & Recreation</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/sl02.png" alt="Sports" />
                     <p>Access to a state-of-the-art sports complex, diverse clubs, and vibrant student events.</p>
                     <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="student-card">
+                <div class="student-card float-item">
                     <h4>Well Being</h4>
                     <img src="https://iitgn.ac.in/assets/img/home/sl03.png" alt="Well Being" />
                     <p>Holistic support and initiatives for mental, physical, and emotional wellness.</p>
@@ -363,7 +360,7 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ===== FOOTER (fixed consistency) ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">

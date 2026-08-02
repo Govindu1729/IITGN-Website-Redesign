@@ -1,11 +1,11 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-    --primary: #045F82;          /* IITGN Blue - Main */
-    --primary-dark: #0A3D5C;     /* Dark Blue */
-    --primary-light: #4A9BB5;    /* Light Blue */
-    --green: #1B5E20;           /* Green - ONLY for campus sections */
-    --gold: #D4A843;            /* Gold accent */
-    --bg-light: #F5F8FA;        /* Light background */
+    --primary: #045F82;
+    --primary-dark: #0A3D5C;
+    --primary-light: #4A9BB5;
+    --green: #1B5E20;
+    --gold: #D4A843;
+    --bg-light: #F5F8FA;
     --text-dark: #1A2A3A;
     --text-secondary: #4A5A6A;
     --white: #FFFFFF;
@@ -15,8 +15,8 @@
     --radius-lg: 16px;
     --space-sm: 0.5rem;
     --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 4rem;
+    --space-lg: 1.5rem;      /* reduced from 2rem */
+    --space-xl: 3rem;        /* reduced from 4rem */
     --transition: 0.3s ease;
 }
 
@@ -183,16 +183,36 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     position: relative; min-height: 80vh; display: flex; align-items: center;
     margin-top: 80px; overflow: hidden;
 }
-.hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; }
-.hero-bg .youtube-background { width: 100%; height: 100%; }
-.hero-bg .youtube-background iframe { width: 100%; height: 100%; object-fit: cover; }
+.hero-bg {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0;
+}
+.hero-bg .youtube-background {
+    width: 100%; height: 100%;
+}
+.hero-bg .youtube-background iframe {
+    width: 100%; height: 100%; object-fit: cover;
+}
 .hero-overlay {
     position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    z-index: 1;
+}
+/* NEW: blur overlay on left side */
+.hero-blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    mask-image: linear-gradient(to right, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%);
+    pointer-events: none;
     z-index: 1;
 }
 .hero-content {
-    position: relative; z-index: 2; color: var(--white); max-width: 650px; padding: var(--space-xl) 0;
+    position: relative; z-index: 2; color: var(--white); max-width: 600px; padding: var(--space-xl) 0;
 }
 .green-badge {
     display: inline-flex; align-items: center; gap: 0.5rem;
@@ -303,7 +323,7 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 }
 .section-title .highlight { color: var(--primary); }
 .section-subtitle {
-    text-align: center; max-width: 700px; margin: 0 auto var(--space-xl);
+    text-align: center; max-width: 700px; margin: 0 auto var(--space-lg);
     color: var(--text-secondary); font-size: 1.05rem;
 }
 .research-grid {
@@ -384,7 +404,7 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 /* ===== FOOTER ===== */
 .footer {
     background: var(--primary-dark);
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.8);
     padding: var(--space-xl) 0 var(--space-md);
 }
 .footer-grid {
@@ -401,14 +421,14 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
 .footer-col ul { list-style: none; }
 .footer-col ul li { margin-bottom: 0.4rem; }
 .footer-col ul li a {
-    color: rgba(255,255,255,0.6); font-size: 0.85rem;
+    color: rgba(255,255,255,0.7); font-size: 0.85rem;
     transition: color 0.2s; text-decoration: none;
 }
 .footer-col ul li a:hover { color: var(--gold); }
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(255,255,255,0.08);
     padding-top: var(--space-md);
-    text-align: center; font-size: 0.8rem; opacity: 0.5;
+    text-align: center; font-size: 0.8rem; opacity: 0.6;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -438,6 +458,7 @@ body.high-contrast { --text-dark: #000; --text-secondary: #000; }
     .services-sidebar { width: 100%; right: -100%; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
+    .hero-blur-overlay { width: 60%; } /* more blur on mobile */
 }
 @media (max-width: 480px) {
     .hero-cta { flex-direction: column; }

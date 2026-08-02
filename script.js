@@ -84,15 +84,17 @@ document.addEventListener('DOMContentLoaded', function() {
     animateNumbers();
 });
 
-// ===== YOUTUBE BACKGROUND =====
+// ===== YOUTUBE BACKGROUND (with start parameter) =====
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.youtube-background');
     if (!container) return;
     const videoId = container.dataset.videoUrl;
+    const start = container.dataset.start || 0; // default 0 if not set
     if (!videoId) return;
     const iframe = document.createElement('iframe');
     iframe.src = 'https://www.youtube.com/embed/' + videoId +
-        '?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&loop=1&playlist=' + videoId;
+        '?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&loop=1&playlist=' + videoId +
+        '&start=' + start;
     iframe.setAttribute('allow', 'autoplay; encrypted-media');
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('aria-hidden', 'true');
@@ -113,5 +115,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
+    });
+});
+
+// ===== FLOATING ANIMATION (Mouse-follow) =====
+let mouseX = 0, mouseY = 0;
+document.addEventListener('mousemove', function(e) {
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
+    document.querySelectorAll('.float-item').forEach(el => {
+        el.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        el.style.transform = `translate(${mouseX * 0.3}px, ${mouseY * 0.3}px)`;
     });
 });
