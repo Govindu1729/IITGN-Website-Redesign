@@ -12,7 +12,7 @@ A complete redesign of the Indian Institute of Technology Gandhinagar official w
 - **Clear CTAs**: Prominent "Apply Now" button and improved user flows
 
 ## 🚀 Live Demo
-[View Live](https://YOUR_USERNAME.github.io/iitgn-redesign/)
+[View Live](https://govindu1729.github.io/IITGN-Website-Redesign/)
 
 ## 🛠️ Technologies Used
 - HTML5
